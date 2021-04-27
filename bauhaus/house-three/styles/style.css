@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  /*border: 2px solid red;*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding-bottom: 10vh;
+  padding-top: 5vh;
+  background: rgba(211,211,211, .1);
+}
+
+inner-column, picture {
+  display: block;
+}
+
+.shapes {
+  display: flex;
+  max-width: 500px;
+}
+
+.gold-triangle {
+  max-width: 170px;
+  margin-top: 20px;
+  margin-right: 20px;
+  order: 1;
+  align-self: flex-end;
+}
+
+h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  writing-mode: vertical-rl;
+  order: 2;
+/*   border: 2px solid red; */
+  font-size: 3em;
+  border-left: 12px solid black;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+h1::first-letter, .school-name::first-letter {
+  text-transform: capitalize;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+section inner-column, .shapes {
+  padding: 10px;
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+.school-name {
+  font-size: 5rem;
+  margin-top: 20px;
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+.history {
+  font-family: Helvetica, sans-serif;
+  margin-top: 20px;
+}
+
+h2 +  blockquote {
+/*   border:  2px solid lime; */
+  margin-top: 10px;
+}
+
+.shapes svg {
+  margin: 10px;
+  max-width: 350px;
+}
+
+blockquote p, figcaption {
+  margin-top: 10px;
+}
+
+p + p, figure + figure {
+  margin-top: 20px;
+}
+
+figure + figure {
+  margin-top: 100px;
+}
+
+h1, h2 {
+  line-height: 1;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+figure img {
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+@media (min-width: 700px) {
+  .shapes, .school-name {
+    transform: rotate(-15deg);
+  }
+  .school-name + .shapes {
+    margin-left: 15%;
+  }
+  .school-name {
+    font-size: 8em;
+  }
+  .shapes svg {
+  }
+  .building-blocks {
+    margin-top: 30px;
+  }
+  section inner-column {
+    max-width: 800px;
+    margin-top: 50px;
+  }
+  .history {
+    margin-top: 100px;
+  }
+  .figure-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .bauhausers {
+    margin-left: 20px;
+  }
+  figure + figure {
+    margin-top: 30px;
+  }
+}

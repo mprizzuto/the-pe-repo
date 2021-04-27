@@ -1,0 +1,148 @@
+* {
+  /*border: 2px solid lime;*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  border: 14px solid white;
+  padding-bottom: 10vh;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+inner-column {
+  display: block;
+}
+
+inner-column {
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  background: linen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+/*   justify-content: center; */
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+}
+
+.location {
+  order: -1;
+/*   border: 10px solid lime; */
+}
+
+.clear-rect {
+/*   order: 2; */
+  max-height: 400px;
+  margin-top: 40px;
+}
+
+h1 {
+/*   order: 1; */
+}
+
+header {
+  grid-row: 1;
+  grid-column: 1 / 2;
+  order: 2;
+}
+
+.square {
+  position: absolute;
+  z-index: 1;
+  top: 480px;
+  left: 5%;
+  max-width: 300px;
+}
+
+.shape-list {
+  border-left: 16px solid black;
+  position: relative;
+  z-index: 2;
+}
+
+.shape-list li {
+  background: black;
+  min-height: 50px;
+  margin-top: 20px;
+  max-width: 300px;
+  min-width: 280px;
+}
+
+h1 {
+  font-size: clamp(2em, 3vw, 3em);
+}
+
+h2 {
+  font-size: clamp(1.8em, 3vw, 3em);
+}
+
+h1, h2 {
+  margin-top: 10px;
+  font-family: Helvetica, sans-serif;
+}
+
+svg {
+  margin-top: 10px;
+}
+
+.location-two {
+  writing-mode: vertical-lr;
+  position: relative;
+  top: 180px;
+  left: 0px;
+}
+
+@media (min-width: 650px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .welcome inner-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .square {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+/*     top: -217px; */
+    left: 10%;
+    max-width: 300px;
+  }
+  .welcome {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .clear-rect {
+/*     max-height: 200px; */
+    order: 1;
+  }
+  h1 {
+    order: 2;
+    font-size: 1.5em;
+  }
+  .location {
+    writing-mode: vertical-rl;
+    color: red;
+    font-size: 2em;
+  }
+}

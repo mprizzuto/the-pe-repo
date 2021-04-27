@@ -1,0 +1,28 @@
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+inner-column {
+  display: block;
+}
+
+inner-column {
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+svg {
+  max-width: 200px;
+  margin: 10px;
+}
+
+.link {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.5em;
+}

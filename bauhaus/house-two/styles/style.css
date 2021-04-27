@@ -1,0 +1,96 @@
+* {
+/*   border: 2px solid lime; */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} 
+
+:root {
+  --blue: #002D62;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 5vh;
+  padding-bottom: 20vh;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h1 span {
+  display: block;
+/*   position: relative;
+  z-index: -1; */
+}
+
+inner-column, mast {
+  display: block;
+}
+
+inner-column, main {
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+main {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 600px;
+}
+
+header {
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+.street-sign {
+  margin-top: 30px;
+}
+
+.vertical-line {
+  min-width: 30px;
+  max-width: 50px;
+/*   min-height: 300px; */
+/*   min-height: 120vh; */
+  min-height: 700px;
+  position: absolute;
+  background: black;
+  right: 150px;
+  right: 40%;
+  z-index: -2;
+/*   grid-column: 2 / 3; */
+}
+
+.blue-line {
+  grid-row: 2;
+  grid-column: 1 / 4;
+/*   max-width: 600px; */
+  width: 100%;
+}
+
+.sun {
+  max-width: 300px;
+  width: 30vw;
+  margin: 10px;
+}
+
+hr.blue-line {
+  min-height: 50px;
+  background: var(--blue);
+  width: 95%;
+}
+
+
+.date {
+  writing-mode: vertical-rl;
+  margin-top: 10px;
+}
